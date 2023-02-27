@@ -1,6 +1,12 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About Tools for Credible Digital Twins</h1>
+    <p>
+      This work has been funded by the
+      <a href="https://www.auckland.ac.nz/en/abi.html" target="_blank"
+        >Auckland Bioengineering Institue</a
+      >
+    </p>
   </div>
 </template>
 
