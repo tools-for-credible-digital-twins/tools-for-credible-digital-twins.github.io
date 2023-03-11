@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Title from './components/Title.vue'
+import TitleScreen from './components/TitleScreen.vue'
 import PhysiomeManCircleIcon from './components/icons/IconPysiomeManCircle.vue'
 </script>
 
@@ -9,7 +9,7 @@ import PhysiomeManCircleIcon from './components/icons/IconPysiomeManCircle.vue'
     <PhysiomeManCircleIcon id="main-icon" />
 
     <div class="wrapper">
-      <Title msg="Welcome!" />
+      <TitleScreen msg="Welcome!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
