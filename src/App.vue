@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Title from './components/Title.vue'
 import PhysiomeManCircleIcon from './components/icons/IconPysiomeManCircle.vue'
 </script>
 
@@ -9,7 +9,7 @@ import PhysiomeManCircleIcon from './components/icons/IconPysiomeManCircle.vue'
     <PhysiomeManCircleIcon id="main-icon" />
 
     <div class="wrapper">
-      <HelloWorld msg="Welcome!" />
+      <Title msg="Welcome!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
