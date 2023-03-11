@@ -144,7 +144,7 @@
   dependencies:
     highlight.js "^11.0.0"
 
-"@hsorby/vue3-katex@^0.6.0-rc.4":
+"@hsorby/vue3-katex@^0.6.0-rc.5":
   version "0.6.0-rc.5"
   resolved "https://registry.yarnpkg.com/@hsorby/vue3-katex/-/vue3-katex-0.6.0-rc.5.tgz#9dc73b217179159de53c4e6bf5c523e9b6ced744"
   integrity sha512-wvRTOa8bVuAWwmdhPIZN9x3oH3B/52uCt5jZ9pnlMZEIPZknNe0BSKmpjjQrJ3U8Vzk0VqLngtQxAWQKiINggw==
@@ -246,7 +246,7 @@
     "@vue/compiler-dom" "3.2.47"
     "@vue/shared" "3.2.47"
 
-"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.4.5", "@vue/devtools-api@^6.5.0":
+"@vue/devtools-api@^6.4.5", "@vue/devtools-api@^6.5.0":
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz#98b99425edee70b4c992692628fa1ea2c1e57d07"
   integrity sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==
@@ -977,6 +977,14 @@ pinia@^2.0.32:
     "@vue/devtools-api" "^6.5.0"
     vue-demi "*"
 
+pinia@^2.0.33:
+  version "2.0.33"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.33.tgz#b70065be697874d5824e9792f59bd5d87ddb5e7d"
+  integrity sha512-HOj1yVV2itw6rNIrR2f7+MirGNxhORjrULL8GWgRwXsGSvEqIQ+SE0MYt6cwtpegzCda3i+rVTZM+AM7CG+kRg==
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
+    vue-demi "*"
+
 postcss-selector-parser@^6.0.9:
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz#2e41dc39b7ad74046e1615185185cd0b17d0c8dc"
@@ -1190,20 +1198,20 @@ vue-router@^4.0.15, vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue3-sphinx-xml@^0.2.1-rc.2:
-  version "0.2.1-rc.2"
-  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.2.1-rc.2.tgz#c533427511b8b6b031a9bc591039ae32a08c8de6"
-  integrity sha512-VqlOk4s3sHVASolNvB3wHEve6TIuwnIJiTVo9xuY6XQOUGE6a/MzmL+cHDH21sx60wwZI/URjvSrqMgSesk7nA==
+vue3-sphinx-xml@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.3.0.tgz#0b5707adfdf9135f99b4fce7d8f552c3fdb1e893"
+  integrity sha512-pR+KB5PPtzMTHs6r1l3VqBXr2Ec3331+L22HVVZXJ9+GuKngw0QaWpaKU7iEUqDcjxke3VqaY5sSMgwHeTV8DQ==
   dependencies:
     "@hsorby/vue3-highlightjs" "^1.0.7"
-    "@hsorby/vue3-katex" "^0.6.0-rc.4"
+    "@hsorby/vue3-katex" "^0.6.0-rc.5"
     axios "^0.21.4"
     core-js "^3.6.5"
     katex "^0.16.2"
     path-to-regexp "^6.2.1"
+    pinia "^2.0.33"
     vue "^3.2.25"
     vue-router "^4.0.15"
-    vuex "^4.0.2"
 
 vue@^3.2.22, vue@^3.2.25, vue@^3.2.47:
   version "3.2.47"
@@ -1215,13 +1223,6 @@ vue@^3.2.22, vue@^3.2.25, vue@^3.2.47:
     "@vue/runtime-dom" "3.2.47"
     "@vue/server-renderer" "3.2.47"
     "@vue/shared" "3.2.47"
-
-vuex@^4.0.2:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.1.0.tgz#aa1b3ea5c7385812b074c86faeeec2217872e36c"
-  integrity sha512-hmV6UerDrPcgbSy9ORAtNXDr9M4wlNP4pEFKye4ujJF8oqgFFuxDCdOLS3eNoRTtq5O3hoBDh9Doj1bQMYHRbQ==
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 which@^2.0.1:
   version "2.0.2"
