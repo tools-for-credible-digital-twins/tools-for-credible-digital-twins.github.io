@@ -1,4 +1,7 @@
 <script setup>
+import { Starport } from 'vue-starport'
+import TitleHeading from './TitleHeading.vue'
+
 defineProps({
   msg: {
     type: String,
@@ -9,12 +12,18 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>Tools for credible digital twins.</h3>
+    <h1 class="purple">{{ msg }}</h1>
+    <Starport port="title-text" id="starport-2">
+      <TitleHeading />
+    </Starport>
   </div>
 </template>
 
 <style scoped>
+#starport-2 {
+  height: 1rem;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;

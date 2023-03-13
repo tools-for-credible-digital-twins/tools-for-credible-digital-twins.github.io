@@ -6,7 +6,7 @@ import router from './router'
 
 import { installVue3SphinxXml } from 'vue3-sphinx-xml'
 
-import './assets/main.css'
+import './assets/base.css'
 
 const app = createApp(App)
 
