@@ -4,6 +4,8 @@
 <document source="/home/runner/work/embc23/embc23/source/reuse/index.rst" xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cite="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:footcite="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">
     <section ids="community-reuse" names="community\ &amp;\ reuse">
         <title>Community &amp; reuse</title>
-        <paragraph>Demonstrate how all of this can be reused in people’s own work using their own tools but now with credibility.</paragraph>
+        <paragraph>In this part of the workshop, we will demonstrate how standards are used to share information across modelling tools that can be utilised in clinical applications.
+            We will then show how this can be reused in people’s own work using their own tools but now with credibility.</paragraph>
+        <paragraph>We will demonstrate how to create a FAIR physiological model that can be submitted to the Physiome journal to create an artifact to provide evidence of credibility.</paragraph>
     </section>
 </document>
