@@ -31,7 +31,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <EcosystemIcon />
     </template>
     <template #heading
-      ><RouterLink to="/modelling-tools">>Modelling and simulation tools</RouterLink></template
+      ><RouterLink to="/modelling-tools">Modelling and simulation tools</RouterLink></template
     >
     Introduction to the tools we will use for modelling and simulation.
   </WelcomeItem>
