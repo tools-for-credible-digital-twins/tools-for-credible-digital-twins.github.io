@@ -11,6 +11,7 @@ import { Starport } from 'vue-starport'
       <PhysiomeManCircleIcon id="main-icon" />
     </Starport>
 
+    <Starport port="title-content">
     <div class="wrapper">
       <TitleScreen msg="Welcome!" />
 
@@ -19,6 +20,7 @@ import { Starport } from 'vue-starport'
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
+  </Starport>
   </header>
 </template>
 
