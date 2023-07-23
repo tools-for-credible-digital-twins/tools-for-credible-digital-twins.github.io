@@ -34,7 +34,7 @@
             <paragraph>The trace should be the same as the one you get when running the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference>:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
-                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135">Simulation Viewer</reference><target dupnames="simulation\ viewer" ids="simulation-viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135"></target> for the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> <reference name="dataset" refuri="https://sparc.science/datasets/135">dataset</reference><target dupnames="dataset" ids="dataset" refuri="https://sparc.science/datasets/135"></target>; and</paragraph>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135">Simulation Viewer</reference> for the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> <reference name="dataset" refuri="https://sparc.science/datasets/135">dataset</reference>; and</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>Click on the <literal>Run Simulation</literal> button.</paragraph>
@@ -58,7 +58,7 @@
             <paragraph>The trace should be the same as the one you get when running the Fabbri-based composite model from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference><target ids="sparc-portal" names="sparc\ portal" refuri="https://sparc.science/"></target>:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
-                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=157">Simulation Viewer</reference><target dupnames="simulation\ viewer" ids="id1" refuri="https://sparc.science/datasets/simulationviewer?id=157"></target> for the Fabbri-based composite model <reference name="dataset" refuri="https://sparc.science/datasets/157">dataset</reference><target dupnames="dataset" ids="id2" refuri="https://sparc.science/datasets/157"></target>;</paragraph>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=157">Simulation Viewer</reference> for the Fabbri-based composite model <reference name="dataset" refuri="https://sparc.science/datasets/157">dataset</reference>;</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>Change the <literal>Spike frequency</literal>, the <literal>Spike number</literal>, and the <literal>Spike amplitude</literal> values as needed; and</paragraph>
@@ -97,7 +97,7 @@
         <target ids="cellml-version" names="cellml\ version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml"></target>
         <target ids="fabbri-et-al-2017-model" names="fabbri\ et\ al.\ 2017\ model" refuri="https://dx.doi.org/10.1113/jp273259"></target>
         <target ids="opencor" names="opencor" refuri="https://opencor.ws/"></target>
-        <target dupnames="sparc\ portal" ids="id3" refuri="https://sparc.science/"></target>
+        <target dupnames="sparc\ portal" ids="id1" refuri="https://sparc.science/"></target>
         <target ids="sparc-scaffold-mapping-tools" names="sparc\ scaffold\ mapping\ tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx"></target>
         <target ids="organ-scaffold" names="organ\ scaffold" refuri="https://docs.sparc.science/docs/organ-scaffolds"></target>
         <target ids="stl" names="stl" refuri="https://en.wikipedia.org/wiki/STL_(file_format)"></target>
