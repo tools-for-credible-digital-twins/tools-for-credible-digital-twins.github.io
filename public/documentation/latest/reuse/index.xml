@@ -7,5 +7,70 @@
         <paragraph>In this part of the workshop, we will demonstrate how standards are used to share information across modelling tools that can be utilised in clinical applications.
             We will then show how this can be reused in people’s own work using their own tools but now with credibility.</paragraph>
         <paragraph>We will demonstrate how to create a FAIR physiological model that can be submitted to the Physiome journal to create an artifact to provide evidence of credibility.</paragraph>
+        <admonition classes="admonition-exercise-1">
+            <title>Exercise 1</title>
+            <paragraph>This exercise is about running the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> of a human sinus node cell using two different tools: <reference name="OpenCOR" refuri="https://opencor.ws/">OpenCOR</reference> and the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference>.
+                First:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Install <reference name="OpenCOR" refuri="https://opencor.ws/">OpenCOR</reference>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Open the <reference name="CellML version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml">CellML version</reference> of the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Switch to the <literal>Simulation</literal> mode;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>In the <literal>Simulation</literal> panel, set the <literal>Ending point</literal> to <literal>3.0</literal> (seconds) and the <literal>Point interval</literal> to <literal>0.001</literal> (seconds);</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>In the <literal>Parameters</literal> panel, right click on the <literal>V</literal> parameter under the <literal>Membrane</literal> heading (component) and then click on the <literal>Plot Against Variable Of Integration</literal> menu item; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Run the simulation.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>The trace should be the same as the one you get when running the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference><target ids="sparc-portal" names="sparc\ portal" refuri="https://sparc.science/"></target>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135">Simulation Viewer</reference><target dupnames="simulation\ viewer" ids="simulation-viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135"></target> for the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> <reference name="dataset" refuri="https://sparc.science/datasets/135">dataset</reference><target dupnames="dataset" ids="dataset" refuri="https://sparc.science/datasets/135"></target>; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Click on the <literal>Run Simulation</literal> button.</paragraph>
+                </list_item>
+            </bullet_list>
+        </admonition>
+        <admonition classes="admonition-exercise-2-reuse">
+            <title>Exercise 2 - Reuse</title>
+            <paragraph>This exercise is about reusing the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> and adding to it a model a neuron, and then simulating it using different spike frequencies, numbers, and amplitudes. First, starting from the above <reference name="CellML version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml">CellML version</reference> of the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Implement the <reference name="ODE-based version" refuri="https://brian2.readthedocs.io/en/stable/user/converting_from_integrated_form.html">ODE-based version</reference><target ids="ode-based-version" names="ode-based\ version" refuri="https://brian2.readthedocs.io/en/stable/user/converting_from_integrated_form.html"></target> of the <reference name="Gerstner &amp; Kistler 2002 model" refuri="https://psycnet.apa.org/doi/10.1017/CBO9780511815706">Gerstner &amp; Kistler 2002 model</reference><target ids="gerstner-kistler-2002-model" names="gerstner\ &amp;\ kistler\ 2002\ model" refuri="https://psycnet.apa.org/doi/10.1017/CBO9780511815706"></target> of a neuron; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Connect it to the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> through the ODE for the <literal>V</literal> variable in the <literal>Membrane</literal> component; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Run the combined model and experiment by changing the spike frequency, the spike number, and the spike amplitude of the neuron part of your combined model.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>The trace should be the same as the one you get when running the Fabbri-based composite model from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference><target dupnames="sparc\ portal" ids="id1" refuri="https://sparc.science/"></target>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=157">Simulation Viewer</reference><target dupnames="simulation\ viewer" ids="id2" refuri="https://sparc.science/datasets/simulationviewer?id=157"></target> for the Fabbri-based composite model <reference name="dataset" refuri="https://sparc.science/datasets/157">dataset</reference><target dupnames="dataset" ids="id3" refuri="https://sparc.science/datasets/157"></target>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Change the <literal>Spike frequency</literal>, the <literal>Spike number</literal>, and the <literal>Spike amplitude</literal> values as needed; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Click on the <literal>Run Simulation</literal> button.</paragraph>
+                </list_item>
+            </bullet_list>
+        </admonition>
+        <target ids="cellml-version" names="cellml\ version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml"></target>
+        <target ids="fabbri-et-al-2017-model" names="fabbri\ et\ al.\ 2017\ model" refuri="https://dx.doi.org/10.1113/jp273259"></target>
+        <target ids="opencor" names="opencor" refuri="https://opencor.ws/"></target>
+        <target dupnames="sparc\ portal" ids="id4" refuri="https://sparc.science/"></target>
     </section>
 </document>

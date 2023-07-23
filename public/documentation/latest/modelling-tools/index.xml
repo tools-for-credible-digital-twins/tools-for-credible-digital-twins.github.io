@@ -4,8 +4,62 @@
 <document source="/home/runner/work/embc23/embc23/source/modelling-tools/index.rst" xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cite="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:footcite="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">
     <section ids="modelling-and-simulation-tools" names="modelling\ and\ simulation\ tools">
         <title>Modelling and Simulation Tools</title>
-        <paragraph>Here we will instroduce various software tools used throughout the workshop, ranging from desktop applications through to web-based applications and programming interfaces.
+        <paragraph>Here we introduce several tools that we are developing in support of various projects, ranging from desktop applications through to web-based applications and programming interfaces.
             As mentioned in <number_reference internal="True" refuri="../introduction/index#workshop-philosophy" title="Section %s"><inline classes="std std-numref">Section 1.2</inline></number_reference> we will cover a range of tools from various domains, and attempt to demonstrate how with the use of appropriate standards they can be chained together to achieve complex workflows through the use of harmonised semantics.</paragraph>
-        <paragraph>The hands-on tutorials will include specific tasks for attendees to choose from to help gain familiarity with each of the tools, depending on your interests.</paragraph>
+        <section ids="using-standards-in-your-own-tools" names="using\ standards\ in\ your\ own\ tools">
+            <title>Using standards in your own tools</title>
+            <paragraph>One of the most important aspects of developing a standard is to ensure that the standard can be used by developers of the tools that should be supporting the standard. For example, modelling standards like <reference name="CellML" refuri="https://cellml.org">CellML</reference>, <reference name="SBML" refuri="https://sbml.org">SBML</reference>, and <reference name="SED-ML" refuri="https://sed-ml.org">SED-ML</reference> have corresponding <reference name="libCellML" refuri="https://libcellml.org">libCellML</reference>, <reference name="libSBML" refuri="https://sbml.org/software/libsbml/">libSBML</reference>, and <reference name="libSEDML" refuri="https://github.com/fbergmann/libSEDML">libSEDML</reference> software libraries that provide the core infrastructure enabling tool developers to use the corresponding standard. Each of these libraries tends to actually be a collection of interconnected resources providing interfaces to different programming languages and/or paradigms.</paragraph>
+            <paragraph>A lot of effort nowadays goes into making sure these core tools are available for use on the web. For example, the tools mentioned in <number_reference internal="True" refuri="../standards/index#section-standards" title="Section %s"><inline classes="std std-numref">Section 2</inline></number_reference> use a mixture of Python and Javascript to interact with them.</paragraph>
+            <paragraph>Some standards don’t lend themselves well to having this kind of core software library or API for developers to directly use. For example, the SPARC dataset structure (SDS) discussed in <number_reference internal="True" refuri="../standards/index#standard-packaging" title="Section %s"><inline classes="std std-numref">Section 2.4</inline></number_reference> is a very high-level specification of how to structure files in a dataset along with harmonised approaches for defining associated metadata. Nevertheless, given the well-defined specification tool developers are able to support the standard. <reference name="SODA" refuri="https://docs.sodaforsparc.io/">SODA</reference> is a desktop application that helps guide users through the process of creating datasets that adhere to the SDS and then uploading them for publication on the <reference name="SPARC Portal" refuri="https://sparc.science">SPARC Portal</reference>.</paragraph>
+            <paragraph>Another tool that works with the SDS is <reference name="SPARC-me" refuri="https://github.com/SPARC-FAIR-Codeathon/sparc-me">SPARC-me</reference>, a SPARC Metadata Editor. This tool aims to provide a Python-based API for working with datasets adhering to the SDS. SPARC-me can then be built into other tools and services to enable support for the SDS.</paragraph>
+        </section>
+        <section ids="creating-editing-and-simulating-models-with-opencor" names="creating,\ editing,\ and\ simulating\ models\ with\ opencor">
+            <title>Creating, editing, and simulating models with OpenCOR</title>
+            <paragraph><reference name="OpenCOR" refuri="https://opencor.ws">OpenCOR</reference> is an open-source cross-platform comprehensive modelling environment. OpenCOR has model creating, editing, and simulating capabilities, primarily using models encoded in the <reference name="CellML" refuri="https://cellml.org">CellML</reference> format. Simulation experiments can be serialised using the <reference name="SED-ML" refuri="https://sed-ml.org">SED-ML</reference> format as well as being able to import and export COMBINE Archive files (see <number_reference internal="True" refuri="../standards/index#standard-packaging" title="Section %s"><inline classes="std std-numref">Section 2.4</inline></number_reference>).</paragraph>
+            <paragraph>The Physiome Model Repository (<reference name="PMR" refuri="https://models.physiomeproject.org/">PMR</reference>) is an extensive collection of models, primarily in the CellML format. PMR has comprehensive support for versioning model evolution over time (using the <reference name="Git" refuri="https://git-scm.com/">Git</reference><target ids="git" names="git" refuri="https://git-scm.com/"></target> distributed version control system), but we often find that this capability is poorly understood by our target users. To overcome this, OpenCOR directly integrates with PMR and guides the user through all aspects of using the version control system.</paragraph>
+            <admonition classes="admonition-exercise">
+                <title>Exercise</title>
+                <paragraph>The <reference name="OpenCOR tutorial" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/">OpenCOR tutorial</reference> is an extensive trip through the capabilities of CellML, PMR, and OpenCOR. As the tutorial gradually builds upon lessons learnt in preceeding steps, it is useful to follow through the tutorial in its entirety. If time is pressing, however, some particular highlights worth jumping to are:</paragraph>
+                <bullet_list bullet="*">
+                    <list_item>
+                        <paragraph>opening a model directly from PMR in OpenCOR [<reference name="link1" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/open_existing.html">link1</reference><target ids="link1" names="link1" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/open_existing.html"></target>];</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>modularity and model reuse [<reference name="link2" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/cellml_imports.html">link2</reference><target ids="link2" names="link2" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/cellml_imports.html"></target>];</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>generating procedural code from CellML models [<reference name="link3" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/code_generation.html">link3</reference><target ids="link3" names="link3" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/code_generation.html"></target>]; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>depositing models into PMR using OpenCOR [<reference name="link4" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/pmr_workspaces_in_opencor.html">link4</reference><target ids="link4" names="link4" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/en/latest/pmr_workspaces_in_opencor.html"></target>].</paragraph>
+                    </list_item>
+                </bullet_list>
+            </admonition>
+        </section>
+        <section ids="mapping-data-to-organ-scaffolds" names="mapping\ data\ to\ organ\ scaffolds">
+            <title>Mapping data to organ scaffolds</title>
+            <paragraph>The <reference name="SPARC scaffold mapping tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx">SPARC scaffold mapping tools</reference> provide a suite of tools to enable data to registered to a common coordinate framework defined by an <reference name="organ scaffold" refuri="https://docs.sparc.science/docs/organ-scaffolds">organ scaffold</reference>. The scaffold mapping tools are actually a specialised release of the <reference name="MAP Client" refuri="https://map-client.readthedocs.io/en/latest/">MAP Client</reference> workflow application, containing all the tools and resources required to achieve the scaffold mapping tasks.</paragraph>
+            <admonition classes="admonition-exercise">
+                <title>Exercise</title>
+                <paragraph>Install the <reference name="SPARC scaffold mapping tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx">SPARC scaffold mapping tools</reference> following the instructions available via that page. At this time, the current release of the scaffold mapping tools should be 0.19.1.</paragraph>
+                <paragraph>Also available from the above link are three step-by-step tutorials demonstrating different mapping tasks. Namely embedding segmented data in a SPARC organ scaffold; mapping physiological data; and mapping image data from a flat preparation. Working through these tutorials will give a good sense of the capabilities that can be achieved due to the standards being used and the harmonisation of the metadata.</paragraph>
+            </admonition>
+            <target ids="libcellml" names="libcellml" refuri="https://libcellml.org"></target>
+            <target ids="libsbml" names="libsbml" refuri="https://sbml.org/software/libsbml/"></target>
+            <target ids="libsedml" names="libsedml" refuri="https://github.com/fbergmann/libSEDML"></target>
+            <target ids="cellml" names="cellml" refuri="https://cellml.org"></target>
+            <target ids="sed-ml" names="sed-ml" refuri="https://sed-ml.org"></target>
+            <target ids="sbml" names="sbml" refuri="https://sbml.org"></target>
+            <target ids="opencor" names="opencor" refuri="https://opencor.ws"></target>
+            <target ids="opencor-tutorial" names="opencor\ tutorial" refuri="https://tutorial-on-cellml-opencor-and-pmr.readthedocs.io/"></target>
+            <target ids="libopencor" names="libopencor" refuri="https://opencor.ws/libopencor"></target>
+            <target ids="pmr" names="pmr" refuri="https://models.physiomeproject.org/"></target>
+            <target ids="soda" names="soda" refuri="https://docs.sodaforsparc.io/"></target>
+            <target ids="sparc-portal" names="sparc\ portal" refuri="https://sparc.science"></target>
+            <target ids="sparc-me" names="sparc-me" refuri="https://github.com/SPARC-FAIR-Codeathon/sparc-me"></target>
+            <target ids="sparc-scaffold-mapping-tools" names="sparc\ scaffold\ mapping\ tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx"></target>
+            <target ids="organ-scaffold" names="organ\ scaffold" refuri="https://docs.sparc.science/docs/organ-scaffolds"></target>
+            <target ids="map-client" names="map\ client" refuri="https://map-client.readthedocs.io/en/latest/"></target>
+        </section>
     </section>
 </document>
