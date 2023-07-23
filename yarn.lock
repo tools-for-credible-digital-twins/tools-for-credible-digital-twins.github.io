@@ -1472,10 +1472,10 @@ vue-starport@^0.3.0:
     "@vueuse/core" "^8.6.0"
     vue "^3.2.37"
 
-vue3-sphinx-xml@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.3.0.tgz#0b5707adfdf9135f99b4fce7d8f552c3fdb1e893"
-  integrity sha512-pR+KB5PPtzMTHs6r1l3VqBXr2Ec3331+L22HVVZXJ9+GuKngw0QaWpaKU7iEUqDcjxke3VqaY5sSMgwHeTV8DQ==
+vue3-sphinx-xml@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.3.2.tgz#6e83e59b7fab72444296cb226bd5ecad2e9a0e34"
+  integrity sha512-lPKQyfBxpo1yN68cG0OVDqrfhDMtc25XizdPClJCeIHaoQ2aDV8AV2KF3i0i0xYbvNbVbhxsejN+xS4Egbs1qw==
   dependencies:
     "@hsorby/vue3-highlightjs" "^1.0.7"
     "@hsorby/vue3-katex" "^0.6.0-rc.5"
