@@ -1,15 +1,6 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
 
 a,
-.green {
+.purple {
   text-decoration: none;
   color: rgb(194, 58, 166);
   transition: 0.4s;
@@ -27,9 +18,17 @@ a,
     place-items: center;
   }
 
-  #app {
+  .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+[data-starport-craft] {
+  background: rgba(69, 213, 69, 0.333);
+}
+
+[data-starport-proxy]:not([data-starport-landed]) {
+  background: rgba(180, 62, 62, 0.549);
 }

@@ -1,0 +1,22 @@
+p {
+  text-align: justify;
+}
+
+/* Style the header */
+header {
+  background-color: var(--color-background-mute);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+img {
+  max-width: 75%;
+  display: block;
+  margin: 2rem auto 2rem auto;
+}
