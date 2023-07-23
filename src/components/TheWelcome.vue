@@ -21,9 +21,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <ToolingIcon />
     </template>
     <template #heading><RouterLink to="/standards">Standards</RouterLink></template>
-    Introduction to the standards that form the basis for creating credible physiological models.
-    Including hands on tutorials to gain familiarity on using the standards, tools for working with
-    them, and APIs and services.
+    Introduction to the standards that form the basis for creating credible physiological models, including hands-on tutorials to gain familiarity on using the standards, tools for working with them, and APIs and services.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -51,7 +49,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <SupportIcon />
     </template>
     <template #heading><RouterLink to="/reuse">Community and reuse</RouterLink></template>
-    Here we will cover sharing a physiological model with the community in a FAIR manner.
+    Here, we will cover sharing a physiological model with the community in a <a href="https://www.go-fair.org/fair-principles/">FAIR</a> manner.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -59,7 +57,6 @@ import SupportIcon from './icons/IconSupport.vue'
       <ToolingIcon />
     </template>
     <template #heading><RouterLink to="/publishing">Publishing</RouterLink></template>
-    Introducing the Physiome journal a key component in encouraging reproducibility and providing
-    evidence for credibility.
+    Introducing the <a href="https://journal.physiomeproject.org/">Physiome journal</a>, a key component in encouraging reproducibility and providing evidence for credibility.
   </WelcomeItem>
 </template>
