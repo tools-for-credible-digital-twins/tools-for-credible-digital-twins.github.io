@@ -1,5 +1,5 @@
 <script setup>
-import { computed, nextTick, onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
 import { SphinxPage } from 'vue3-sphinx-xml'
 
@@ -15,22 +15,33 @@ const documentationPath = computed(() => {
 
 let inPageLinks = ref([])
 
+const checkForHeadings = (mainElement, timeout) => {
+  setTimeout(() => {
+    const sections = mainElement.querySelectorAll('section')
+    sections.forEach((element) => {
+      let firstElementChild = element.firstElementChild
+      if (firstElementChild.tagName === 'SPAN') {
+        firstElementChild = firstElementChild.nextElementSibling
+      }
+      if (['H1', 'H2'].includes(firstElementChild.tagName)) {
+        const heading = { id: element.id, text: firstElementChild.innerText }
+        if (
+          !inPageLinks.value.find((x) => {
+            return x.id === heading.id
+          })
+        ) {
+          inPageLinks.value.push(heading)
+        }
+      }
+    })
+  }, timeout)
+}
+
 onMounted(() => {
   const mainElement = document.querySelector('main')
-  nextTick(() => {
-    setTimeout(() => {
-      const sections = mainElement.querySelectorAll('section')
-      sections.forEach((element) => {
-        let firstElementChild = element.firstElementChild
-        if (firstElementChild.tagName === 'SPAN') {
-          firstElementChild = firstElementChild.nextElementSibling
-        }
-        if (['H1', 'H2'].includes(firstElementChild.tagName)) {
-          inPageLinks.value.push({ id: element.id, text: firstElementChild.innerText })
-        }
-      })
-    }, 1500)
-  })
+  checkForHeadings(mainElement, 250)
+  checkForHeadings(mainElement, 750)
+  checkForHeadings(mainElement, 1500)
 })
 </script>
 
