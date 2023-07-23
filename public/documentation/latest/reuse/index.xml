@@ -4,8 +4,104 @@
 <document source="/home/runner/work/embc23/embc23/source/reuse/index.rst" xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cite="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:footcite="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">
     <section ids="community-reuse" names="community\ &amp;\ reuse">
         <title>Community &amp; reuse</title>
-        <paragraph>In this part of the workshop, we will demonstrate how standards are used to share information across modelling tools that can be utilised in clinical applications.
-            We will then show how this can be reused in people’s own work using their own tools but now with credibility.</paragraph>
-        <paragraph>We will demonstrate how to create a FAIR physiological model that can be submitted to the Physiome journal to create an artifact to provide evidence of credibility.</paragraph>
+        <paragraph>In this part of the workshop, we will demonstrate how standards are used to share information across modelling tools.
+            We show how this could be reused in your own work using your own tools.</paragraph>
+        <paragraph>The following exercises assume some familiarity with CellML and OpenCOR. For those without any familiarity, please see <number_reference internal="True" refuri="../modelling-tools/index#opencor-tutorial" title="Section %s"><inline classes="std std-numref">Section 3.2</inline></number_reference>.</paragraph>
+        <admonition classes="admonition-exercise-1">
+            <title>Exercise 1</title>
+            <paragraph>This exercise is about running the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> of a human sinus node cell using two different tools: <reference name="OpenCOR" refuri="https://opencor.ws/">OpenCOR</reference> and the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference>.
+                First:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Install <reference name="OpenCOR" refuri="https://opencor.ws/">OpenCOR</reference>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Open the <reference name="CellML version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml">CellML version</reference> of the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Switch to the <literal>Simulation</literal> mode;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>In the <literal>Simulation</literal> panel, set the <literal>Ending point</literal> to <literal>3.0</literal> (seconds) and the <literal>Point interval</literal> to <literal>0.001</literal> (seconds);</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>In the <literal>Parameters</literal> panel, right click on the <literal>V</literal> parameter under the <literal>Membrane</literal> heading (component) and then click on the <literal>Plot Against Variable Of Integration</literal> menu item; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Run the simulation.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>The trace should be the same as the one you get when running the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=135">Simulation Viewer</reference> for the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> <reference name="dataset" refuri="https://sparc.science/datasets/135">dataset</reference>; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Click on the <literal>Run Simulation</literal> button.</paragraph>
+                </list_item>
+            </bullet_list>
+        </admonition>
+        <admonition classes="admonition-exercise-2-reuse">
+            <title>Exercise 2 - Reuse</title>
+            <paragraph>This exercise is about reusing the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> and adding to it a model a neuron, and then simulating it using different spike frequencies, numbers, and amplitudes. First, starting from the above <reference name="CellML version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml">CellML version</reference> of the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Implement the <reference name="ODE-based version" refuri="https://brian2.readthedocs.io/en/stable/user/converting_from_integrated_form.html">ODE-based version</reference><target ids="ode-based-version" names="ode-based\ version" refuri="https://brian2.readthedocs.io/en/stable/user/converting_from_integrated_form.html"></target> of the <reference name="Gerstner &amp; Kistler 2002 model" refuri="https://psycnet.apa.org/doi/10.1017/CBO9780511815706">Gerstner &amp; Kistler 2002 model</reference><target ids="gerstner-kistler-2002-model" names="gerstner\ &amp;\ kistler\ 2002\ model" refuri="https://psycnet.apa.org/doi/10.1017/CBO9780511815706"></target> of a neuron; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Connect it to the <reference name="Fabbri et al. 2017 model" refuri="https://dx.doi.org/10.1113/jp273259">Fabbri et al. 2017 model</reference> through the ODE for the <literal>V</literal> variable in the <literal>Membrane</literal> component; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Run the combined model and experiment by changing the spike frequency, the spike number, and the spike amplitude of the neuron part of your combined model.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>The trace should be the same as the one you get when running the Fabbri-based composite model from the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference><target ids="sparc-portal" names="sparc\ portal" refuri="https://sparc.science/"></target>:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Open the <reference name="Simulation Viewer" refuri="https://sparc.science/datasets/simulationviewer?id=157">Simulation Viewer</reference> for the Fabbri-based composite model <reference name="dataset" refuri="https://sparc.science/datasets/157">dataset</reference>;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Change the <literal>Spike frequency</literal>, the <literal>Spike number</literal>, and the <literal>Spike amplitude</literal> values as needed; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Click on the <literal>Run Simulation</literal> button.</paragraph>
+                </list_item>
+            </bullet_list>
+        </admonition>
+        <paragraph>As discussed and demonstrated in <number_reference internal="True" refuri="../modelling-tools/index#scaffold-mapping-tools" title="Section %s"><inline classes="std std-numref">Section 3.3</inline></number_reference>, the <reference name="SPARC scaffold mapping tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx">SPARC scaffold mapping tools</reference> provide a collection of pre-defined <reference name="organ scaffold" refuri="https://docs.sparc.science/docs/organ-scaffolds">organ scaffold</reference> geometries. As the scaffold mapping tools are built on top of a generic workflow application, those same tools can be configured to use the organ scaffolds in other ways. A particularly common use-case is the exporting of an organ scaffold into various formats for use in other tools. If you have been through the exercise in <number_reference internal="True" refuri="../modelling-tools/index#scaffold-mapping-tools" title="Section %s"><inline classes="std std-numref">Section 3.3</inline></number_reference> you will be familiar with exporting organ scaffolds as WebGL suitable for use on the <reference name="SPARC Portal" refuri="https://sparc.science/">SPARC Portal</reference>. In the following exercise we look at exporting organ scaffolds to <reference name="STL" refuri="https://en.wikipedia.org/wiki/STL_(file_format)">STL</reference> and <reference name="VTK" refuri="https://vtk.org/">VTK</reference> formats.</paragraph>
+        <admonition classes="admonition-exercise">
+            <title>Exercise</title>
+            <paragraph>If you have not installed the <reference name="SPARC scaffold mapping tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx">SPARC scaffold mapping tools</reference>, please follow the instructions available via that page to install the application.</paragraph>
+            <paragraph>After launching the mapping tools application, we first will need to create a suitable workflow for creating an organ scaffold and exporting it to the chosen format. The steps required in such a workflow are</paragraph>
+            <bullet_list bullet="*">
+                <list_item>
+                    <paragraph><inline classes="guilabel" rawtext=":guilabel:`Scaffold Creator`">Scaffold Creator</inline>, to define the organ scaffold;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><inline classes="guilabel" rawtext=":guilabel:`Argon Viewer`">Argon Viewer</inline>, to define the graphics scene to be exported; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><inline classes="guilabel" rawtext=":guilabel:`Argon Scene Exporter`">Argon Scene Exporter</inline>, to perform the export.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>These steps should be arranged and connected as shown below.</paragraph>
+            <image candidates="{'*': '_static/scaffold-exporter-workflow.png'}" uri="_static/scaffold-exporter-workflow.png" width="600"></image>
+            <paragraph>The only step requiring configuration is the <inline classes="guilabel" rawtext=":guilabel:`Argon Scene Exporter`">Argon Scene Exporter</inline> step, which can be configured to define the desired export type (i.e., STL or VTK) and the directory in which to save the exported files.</paragraph>
+            <paragraph>Once configured and saved, the workflow can be executed. The first interactive step is to define the organ scaffold to be exported. Once defined, the next step is to configure the scene to be exported. Once the scene is configured, selected <inline classes="guilabel" rawtext=":guilabel:`Done`">Done</inline> will proceed to the execute the export step and the workflow will be complete.</paragraph>
+            <paragraph>The exporter step can now be reconfigured to export to a different format and the workflow executed again to produce that export.</paragraph>
+            <paragraph>Scaffolds exported to the VTK format can be tested using the freely available <reference name="Glance" refuri="https://kitware.github.io/glance/app/">Glance</reference><target ids="glance" names="glance" refuri="https://kitware.github.io/glance/app/"></target> web-app. An example of the pig heart scaffold exported to VTK and rendered in Glance is shown below.</paragraph>
+            <image candidates="{'*': '_static/pig-heart-vtk.png'}" uri="_static/pig-heart-vtk.png" width="600"></image>
+            <paragraph>Similarly, exported STL models can be tested using the freely available <reference name="ViewSTL" refuri="https://www.viewstl.com/">ViewSTL</reference><target ids="viewstl" names="viewstl" refuri="https://www.viewstl.com/"></target> web-app. The pig heart scaffold exported to STL is shown below.</paragraph>
+            <image candidates="{'*': '_static/pig-heart-stl.png'}" uri="_static/pig-heart-stl.png" width="600"></image>
+        </admonition>
+        <target ids="cellml-version" names="cellml\ version" refuri="https://models.physiomeproject.org/workspace/486/rawfile/55879cbc485e2d4c41f3dc6d60424b849f94c4ee/HumanSAN_Fabbri_Fantini_Wilders_Severi_2017.cellml"></target>
+        <target ids="fabbri-et-al-2017-model" names="fabbri\ et\ al.\ 2017\ model" refuri="https://dx.doi.org/10.1113/jp273259"></target>
+        <target ids="opencor" names="opencor" refuri="https://opencor.ws/"></target>
+        <target dupnames="sparc\ portal" ids="id1" refuri="https://sparc.science/"></target>
+        <target ids="sparc-scaffold-mapping-tools" names="sparc\ scaffold\ mapping\ tools" refuri="https://sparc.science/resources/1mv8q3JckdpSYpPK9dvdKx"></target>
+        <target ids="organ-scaffold" names="organ\ scaffold" refuri="https://docs.sparc.science/docs/organ-scaffolds"></target>
+        <target ids="stl" names="stl" refuri="https://en.wikipedia.org/wiki/STL_(file_format)"></target>
+        <target ids="vtk" names="vtk" refuri="https://vtk.org/"></target>
+        <target ids="scaffold-creator" names="scaffold\ creator" refuri="https://abi-mapping-tools.readthedocs.io/en/v1.2.1/mapclientplugins.scaffoldcreator/docs/index.html"></target>
     </section>
 </document>
