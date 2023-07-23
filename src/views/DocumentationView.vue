@@ -29,7 +29,7 @@ onMounted(() => {
           inPageLinks.value.push({ id: element.id, text: firstElementChild.innerText })
         }
       })
-    }, 500)
+    }, 1500)
   })
 })
 </script>
