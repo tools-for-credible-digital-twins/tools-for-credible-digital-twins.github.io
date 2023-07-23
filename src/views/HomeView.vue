@@ -10,7 +10,7 @@ import TheWelcome from '../components/TheWelcome.vue'
     <template #header>
       <physiome-man-circle-icon class="logo" />
       <div class="wrapper">
-        <title-screen msg="Welcome!" level="3"/>
+        <title-screen msg="Welcome!" level="3" />
         <nav>
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
