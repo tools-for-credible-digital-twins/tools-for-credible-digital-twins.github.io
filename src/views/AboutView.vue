@@ -11,7 +11,7 @@ import DocumentationIcon from '../components/icons/IconDocumentation.vue'
     <template #header>
       <PhysiomeManCircleIcon class="logo" />
       <div class="wrapper">
-        <TitleScreen msg="About" level="3"/>
+        <TitleScreen msg="About" level="3" />
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
