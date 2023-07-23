@@ -13,7 +13,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <DocumentationIcon />
     </template>
     <template #heading><RouterLink to="/introduction">Introduction</RouterLink></template>
-    Gerneral overview for the workshop.
+    General overview for the workshop.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -21,7 +21,7 @@ import SupportIcon from './icons/IconSupport.vue'
       <ToolingIcon />
     </template>
     <template #heading><RouterLink to="/standards">Standards</RouterLink></template>
-    Introducion to the standards that form the basis for creating credible physiological models.
+    Introduction to the standards that form the basis for creating credible physiological models.
     Including hands on tutorials to gain familiarity on using the standards, tools for working with
     them, and APIs and services.
   </WelcomeItem>

@@ -1,11 +1,14 @@
 <script setup>
-import { Starport } from 'vue-starport'
 import TitleHeading from './TitleHeading.vue'
 
 defineProps({
   msg: {
     type: String,
     required: true
+  }, 
+  level: {
+    type: String,
+    default: "1"
   }
 })
 </script>
@@ -13,9 +16,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="purple">{{ msg }}</h1>
-    <Starport port="title-text" id="starport-2">
-      <TitleHeading />
-    </Starport>
+      <title-heading :level="level" />
   </div>
 </template>
 

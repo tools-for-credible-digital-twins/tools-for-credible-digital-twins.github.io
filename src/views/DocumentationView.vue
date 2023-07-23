@@ -1,9 +1,10 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
 import { SphinxPage } from 'vue3-sphinx-xml'
-import { Starport } from 'vue-starport'
+
 import PhysiomeManCircleIcon from '../components/icons/IconPysiomeManCircle.vue'
+import DocumentationLayout from '../layouts/DocumentationLayout.vue'
 import TitleHeading from '../components/TitleHeading.vue'
 
 const route = useRoute()
@@ -11,44 +12,85 @@ const route = useRoute()
 const documentationPath = computed(() => {
   return `/documentation/latest${route.path}`
 })
+
+let inPageLinks = ref([])
+
+onMounted(() => {
+  const mainElement = document.querySelector('main')
+  nextTick(() => {
+    setTimeout(() => {
+      const sections = mainElement.querySelectorAll('section')
+      sections.forEach((element) => {
+        let firstElementChild = element.firstElementChild
+        if (firstElementChild.tagName === 'SPAN') {
+          firstElementChild = firstElementChild.nextElementSibling
+        }
+        if (['H1', 'H2'].includes(firstElementChild.tagName)) {
+          inPageLinks.value.push({ id: element.id, text: firstElementChild.innerText })
+        }
+      })
+    }, 500)
+  })
+})
 </script>
 
 <template>
-  <div class="header">
-    <div class="row">
-      <div class="column side">
-        <RouterLink to="/">
-          <Starport port="physiome-icon" id="starport-1">
-            <PhysiomeManCircleIcon id="main-icon" />
-          </Starport>
-        </RouterLink>
+  <documentation-layout>
+    <template #header>
+      <router-link to="/">
+        <physiome-man-circle-icon class="logo" />
+      </router-link>
+      <title-heading />
+    </template>
+    <template #aside>
+      <div>
+        <router-link to="/">Home</router-link>
       </div>
-      <div class="column middle">
-        <Starport port="title-text" id="starport-2">
-          <TitleHeading />
-        </Starport>
+      <div v-for="link in inPageLinks" :key="link.id">
+        <router-link :to="`#${link.id}`" class="nobreak">{{ link.text }}</router-link>
       </div>
-      <div class="column side"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column side"></div>
-    <div class="documentation column middle">
-      <sphinx-page :baseURL="documentationPath" imagesBaseURL="/documentation/latest/_static" />
-    </div>
-    <div class="column side"></div>
-  </div>
-  <div class="footer">Footer</div>
+    </template>
+    <sphinx-page :baseURL="documentationPath" imagesBaseURL="/documentation/latest/_static" />
+  </documentation-layout>
 </template>
 
-<style>
-@import url('../assets/docspage.css');
-
-#starport-1 {
-  width: 3rem;
-  height: 3rem;
+<style scoped>
+.physiome-man-icon {
+  width: 75px;
+  height: 75px;
 }
-#starport-2 {
-  height: 1rem;
+
+.nobreak {
+  white-space: nowrap;
+}
+
+header {
+  display: flex;
+}
+
+header h1 {
+  margin-left: 1rem;
+}
+
+img {
+  padding-top: 1rem;
+}
+</style>
+
+<style>
+section img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+}
+
+section h1 {
+  padding-top: 2rem;
+}
+section h2 {
+  padding-top: 1rem;
 }
 </style>
