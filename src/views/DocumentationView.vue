@@ -104,4 +104,18 @@ section h1 {
 section h2 {
   padding-top: 1rem;
 }
+
+div.admonition.admonition-exercise {
+  padding: 0rem 1.8rem 1rem 1.8rem;
+  background-color: var(--color-exercise);
+  border: 1px solid var(--color-exercise-border);
+  color: var(--color-exercise-text);
+}
+
+div.admonition.warning {
+  padding: 0rem 1.8rem 1rem 1.8rem;
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  color: var(--color-warning-text);
+}
 </style>
