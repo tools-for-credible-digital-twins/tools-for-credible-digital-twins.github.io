@@ -15,6 +15,7 @@ let routes = [
 ]
 
 for (let docpage of [
+  'biblio',
   'clinical-applications',
   'introduction',
   'modelling-tools',
@@ -23,7 +24,7 @@ for (let docpage of [
   'standards'
 ]) {
   routes.push({
-    path: `/${docpage}`,
+    path: `/${docpage}/:pageName*`,
     name: docpage,
     component: () => import('../views/DocumentationView.vue')
   })
@@ -31,7 +32,7 @@ for (let docpage of [
 
 routes.push({
   path: '/:pathMatch(.*)*',
-  name: 'NotFound',
+  name: '404',
   meta: { title: 'Tools for Credible Digital Twins: Not Found' },
   component: () => import('../views/NotFound.vue')
 })

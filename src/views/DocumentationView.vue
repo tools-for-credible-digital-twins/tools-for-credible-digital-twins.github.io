@@ -61,7 +61,11 @@ onMounted(() => {
         <router-link :to="`#${link.id}`" class="nobreak">{{ link.text }}</router-link>
       </div>
     </template>
-    <sphinx-page :baseURL="documentationPath" imagesBaseURL="/documentation/latest/_static" />
+    <sphinx-page
+      :baseURL="documentationPath"
+      imagesBaseURL="/documentation/latest/_static"
+      referenceBaseURL="/"
+    />
   </documentation-layout>
 </template>
 

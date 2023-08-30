@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const prettyPath = computed(() => {
-  return route.params.pathMatch.join('/')
+  return route.query.path
 })
 </script>
 
@@ -14,7 +14,6 @@ const prettyPath = computed(() => {
   <h4>{{ prettyPath }}</h4>
   <br />
   <p>
-    does not exist. Please use the "back" button on your browser to return to where you were, or
-    start again using the links in the menu bar.
+    does not exist. Try starting from the <RouterLink to="/">home</RouterLink> page to find the page you are looking for.
   </p>
 </template>

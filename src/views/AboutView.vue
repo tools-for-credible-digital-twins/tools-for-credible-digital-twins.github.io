@@ -1,24 +1,12 @@
 <script setup>
-import TitleScreen from '../components/TitleScreen.vue'
 import StandardLayout from '../layouts/StandardLayout.vue'
-import PhysiomeManCircleIcon from '../components/icons/IconPysiomeManCircle.vue'
 import WelcomeItem from '../components/WelcomeItem.vue'
 import DocumentationIcon from '../components/icons/IconDocumentation.vue'
 import CommunityIcon from '../components/icons/IconCommunity.vue'
 </script>
 
 <template>
-  <standard-layout>
-    <template #header>
-      <PhysiomeManCircleIcon class="logo" />
-      <div class="wrapper">
-        <TitleScreen msg="About" level="3" />
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </template>
+  <standard-layout title="About">
     <WelcomeItem>
       <template #icon>
         <DocumentationIcon />
@@ -40,22 +28,3 @@ import CommunityIcon from '../components/icons/IconCommunity.vue'
     </WelcomeItem>
   </standard-layout>
 </template>
-
-<style scoped>
-@import url('../assets/main.css');
-@import url('../assets/nav.css');
-@import url('../assets/header.css');
-@import url('../assets/logo.css');
-
-.physiome-man-icon {
-  width: 75px;
-  height: 75px;
-}
-
-@media (min-width: 1024px) {
-  .physiome-man-icon {
-    width: 225px;
-    height: 225px;
-  }
-}
-</style>
