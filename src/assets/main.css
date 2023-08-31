@@ -2,7 +2,6 @@
 a,
 .purple {
   text-decoration: none;
-  color: rgb(194, 58, 166);
   transition: 0.4s;
 }
 
@@ -20,6 +19,7 @@ a,
 
   .container {
     display: grid;
+    min-height: 600px;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
