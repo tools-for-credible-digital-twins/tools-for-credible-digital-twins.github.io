@@ -5,6 +5,7 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import UploadIcon from './icons/IconUpload.vue'
 </script>
 
 <template>
@@ -49,14 +50,14 @@ import SupportIcon from './icons/IconSupport.vue'
       <SupportIcon />
     </template>
     <template #heading><RouterLink to="/reuse">Community and reuse</RouterLink></template>
-    Here, we will cover sharing a physiological model with the community in a <a href="https://www.go-fair.org/fair-principles/">FAIR</a> manner.
+    Here, we will cover sharing a physiological model with the community in a <a _target="blank" href="https://www.go-fair.org/fair-principles/">FAIR</a> manner.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <UploadIcon />
     </template>
     <template #heading><RouterLink to="/publishing">Publishing</RouterLink></template>
-    Introducing the <a href="https://journal.physiomeproject.org/">Physiome journal</a>, a key component in encouraging reproducibility and providing evidence for credibility.
+    Introducing the <a _target="blank" href="https://journal.physiomeproject.org/">Physiome journal</a>, a key component in encouraging reproducibility and providing evidence for credibility.
   </WelcomeItem>
 </template>

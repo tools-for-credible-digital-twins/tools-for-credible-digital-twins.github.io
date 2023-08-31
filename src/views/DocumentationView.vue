@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUpdated, ref } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
 import { SphinxPage } from 'vue3-sphinx-xml'
 
@@ -36,12 +36,20 @@ const checkForHeadings = (mainElement, timeout) => {
     })
   }, timeout)
 }
+const updateHeadings = () => {
+  const mainElement = document.querySelector('main')
+  for (const waitPeriod of [250, 750, 1500]){
+    checkForHeadings(mainElement, waitPeriod)
+  }
+}
 
 onMounted(() => {
-  const mainElement = document.querySelector('main')
-  checkForHeadings(mainElement, 250)
-  checkForHeadings(mainElement, 750)
-  checkForHeadings(mainElement, 1500)
+  updateHeadings()
+})
+
+onUpdated(() => {
+  inPageLinks.value.length = 0
+  updateHeadings()
 })
 </script>
 
@@ -61,7 +69,11 @@ onMounted(() => {
         <router-link :to="`#${link.id}`" class="nobreak">{{ link.text }}</router-link>
       </div>
     </template>
-    <sphinx-page :baseURL="documentationPath" imagesBaseURL="/documentation/latest/_static" />
+    <sphinx-page
+      :baseURL="documentationPath"
+      imagesBaseURL="/documentation/latest/_static"
+      referenceBaseURL="/"
+    />
   </documentation-layout>
 </template>
 
