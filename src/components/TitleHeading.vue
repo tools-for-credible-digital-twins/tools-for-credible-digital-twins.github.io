@@ -13,5 +13,5 @@ const headingTag = computed(() => {
 </script>
 
 <template>
-  <component :is="headingTag">Tools for credible digital twins.</component>
+  <component :is="headingTag">Tools for implementing the virtual human twin.</component>
 </template>

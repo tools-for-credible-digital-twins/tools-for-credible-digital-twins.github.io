@@ -33,7 +33,7 @@ for (let docpage of [
 routes.push({
   path: '/:pathMatch(.*)*',
   name: '404',
-  meta: { title: 'Tools for Credible Digital Twins: Not Found' },
+  meta: { title: 'Tools for Implementing the Virtual Human Twin: Not Found' },
   component: () => import('../views/NotFound.vue')
 })
 

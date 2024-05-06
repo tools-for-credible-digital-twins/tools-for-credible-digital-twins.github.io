@@ -12,7 +12,7 @@ import SlidesIcon from '../components/icons/IconSlides.vue'
       <template #icon>
         <DocumentationIcon />
       </template>
-      <template #heading>About Tools for Credible Digital Twins</template>
+      <template #heading>About Tools for implementing the virtual human twin</template>
       This work has been funded by the
       <a href="https://www.auckland.ac.nz/en/abi.html" target="_blank"
         >Auckland Bioengineering Institue</a
