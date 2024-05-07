@@ -6,8 +6,8 @@
 sphinx-quickstart on Thu Mar  2 08:49:28 2023.
 You can adapt this file completely to your liking, but it should at least
 contain the root `toctree` directive.</comment>
-    <section ids="tools-for-implementing-the-virtual-human-twin" names="tools\ for\ implementing\ the\ virtual\ human\ twin">
-        <title>Tools for implementing the virtual human twin</title>
+    <section ids="tools-for-credible-modelling-of-digital-twins" names="tools\ for\ credible\ modelling\ of\ digital\ twins">
+        <title>Tools for credible modelling of digital twins</title>
         <paragraph>This is a Sphinx placeholder index page for the EMBC’23 workshop docs.
             It will not be displayed on the resulting website at: <reference refuri="https://tools-for-credible-digital-twins.github.io/">https://tools-for-credible-digital-twins.github.io/</reference>, but should be used for rendering and navigating content in your local working environment.</paragraph>
         <compound classes="toctree-wrapper">
